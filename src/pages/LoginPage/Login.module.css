@@ -1,0 +1,210 @@
+
+/* ---------------- Textos, títulos e subtítulos ---------------- */
+
+.welcomeText {
+    font-family: Manrope;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: var(--darker-gray-60);
+}
+
+.entryText {
+    font-family: Manrope;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: var(--my-black);
+}
+
+.labelText {
+    font-family: Manrope;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: var(--my-black);
+}
+
+.buttonsDiv button {
+    font-family: Manrope;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+/* ------------------------------------------------ */
+
+.main {
+    width: 100%;
+    height: 99.5vh;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.pictureSide {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pictureSide img {
+    width: 100%;
+    height: 100%;
+
+    /* object-fit: cover;
+    object-position: center;  */
+}
+
+.loginSide {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px;
+
+    padding: 40px 160px;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.welcomeDiv {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+
+.inputsDiv {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.eachInput {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.eachInput input {
+    width: 100%;
+
+    font-family: Manrope;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    background-color: var(--lighter-gray);
+    border-radius: 4px;
+    padding: 16px;
+
+    &::placeholder {
+        font-family: Manrope;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+        color: var(--darker-gray-40);
+    }
+}
+
+.buttonsDiv {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.entryBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--my-orange);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+
+    color: white;
+    transition: all ease .2s;
+
+    &:hover {
+        background-color: white;
+        border: 1px solid var(--my-orange);
+        color: var(--my-orange);
+        cursor: pointer;
+    }
+}
+
+.registerBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: white;
+    border: 1px solid var(--my-blue);
+    border-radius: 4px;
+    padding: 10px 20px;
+
+    color: var(--my-blue);
+    transition: all ease .2s;
+
+    &:hover {
+        background-color: var(--my-blue);
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.errorMsg {
+    font-family: Manrope;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: red;
+}

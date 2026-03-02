@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --my-black: #090937;
+    --darker-gray-60: #09093799; /* 60% de opacidade */
+    --darker-gray-40: #09093766; /* 40% de opacidade */
+    --darker-gray-10: #0909371a; /* 10% de opacidade */
+    --darker-gray-2:#09093905; /* 2% de opacidade */
+
+    --lighter-gray: #F4F4FF;
+    --my-blue: #6251DD;
+    --my-blue-20: #6251DD33; /* 20% de opacidade */
+    --my-orange: #EF6B4A;
+    /* white */
+}

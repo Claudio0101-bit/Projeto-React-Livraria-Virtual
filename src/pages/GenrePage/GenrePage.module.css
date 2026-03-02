@@ -1,0 +1,130 @@
+
+
+.genreSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+
+    padding: 50px 0;
+}
+
+.searchBar {
+    width: 800px;
+    height: 50px;
+    background-color: var(--lighter-gray);
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.searchBar button {
+    border: none;
+    background: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.searchInput {
+    width: 100%;
+    background: none;
+
+    font-family: Manrope;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    &::placeholder {
+        font-family: Manrope;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+        color: var(--darker-gray-40);
+    }
+
+}
+
+.titleGenre {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.titleGenre h3 {
+    font-family: Manrope;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: var(--my-black);
+}
+
+.titleGenre button {
+    border: none;
+    background: none;
+}
+
+.bookSection {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.bookList {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.pendingMsg {
+    font-family: Manrope;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: var(--my-blue);
+}
+
+.errorMsg {
+    font-family: Manrope;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: red;
+}
