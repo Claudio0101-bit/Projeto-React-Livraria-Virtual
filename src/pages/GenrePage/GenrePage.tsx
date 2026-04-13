@@ -54,8 +54,8 @@ export default function GenrePage() {
                 <div className={styles.titleGenre}>
                     <button onClick={BackClick}>
                         <img src={arrowSyboml} alt="Seta para voltar" />
+                        <h3>{genre}</h3>
                     </button>
-                    <h3>{genre}</h3>
                 </div>
 
                 

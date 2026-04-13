@@ -7,7 +7,9 @@ export function useIdBook(id: number): IdBookState {
     const { data,error,isPending,isSuccess,isError,refetch} = useQuery({
         queryKey:['livro',id],
         
-        queryFn: async () => library.getBookById(id).then((res) => res.data)
+        queryFn: async () => library.getBookById(id).then((res) => res.data),
+
+        refetchInterval: 1000 * 60 * 5
     });
     
     

@@ -38,6 +38,12 @@
     align-items: center;
     border: none;
     background-color: var(--lighter-gray);
-    cursor: pointer;
+
+    transition: all ease .2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
 
 }

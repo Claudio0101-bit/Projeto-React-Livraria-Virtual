@@ -31,8 +31,18 @@
 }
 
 .titleDetails button {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
     border: none;
     background: none;
+
+    transition: all ease .2s;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
 }
 
 .bookContainer {
@@ -170,4 +180,64 @@
     letter-spacing: 0%;
 
     color: white;
+}
+
+.pendingMsg {
+    font-family: Manrope;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    padding: 20px 10px; 
+    color: var(--my-blue);
+}
+
+.errorMsg {
+    font-family: Manrope;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: red;
+}
+
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 60px;
+}
+
+.backBtn {
+    width: 200px;
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 4px;
+
+    font-family: Manrope;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: black;
+    background-color: var(--my-orange);
+    transition: all ease .2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
 }

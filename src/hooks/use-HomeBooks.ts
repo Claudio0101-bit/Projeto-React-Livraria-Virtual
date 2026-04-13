@@ -7,7 +7,9 @@ export function useHomeBooks(genre: string): HomeBooksState {
         
         queryKey:['books-home', genre],
         
-        queryFn: async () => library.get4BooksByGenre(4, genre).then((res) => res.data)
+        queryFn: async () => library.get4BooksByGenre(4, genre).then((res) => res.data),
+
+        refetchInterval: 1000 * 60 * 10
     });
     
     

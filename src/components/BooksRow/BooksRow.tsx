@@ -15,7 +15,7 @@ export default function BooksRow({ genre }: Genre) {
     }
     
     const {data: books, isPending, isError} = useHomeBooks(genre)
-    console.log(books)
+    // console.log(books)
 
     return (
         <>
@@ -24,7 +24,7 @@ export default function BooksRow({ genre }: Genre) {
                     <div className={styles.titleSection}>
                         
                         <h3>{genre}</h3>
-                        <button onClick={SeeMoreClick}>Ver mais</button>
+                        <button className={styles.btnSeeMore} onClick={SeeMoreClick}>Ver mais</button>
                     
                     </div>
                     

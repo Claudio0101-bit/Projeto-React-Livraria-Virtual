@@ -44,6 +44,10 @@
     line-height: 100%;
     letter-spacing: 0%;
 
+    &:focus {
+        outline: none;
+    }
+
     &::placeholder {
         font-family: Manrope;
         font-weight: 400;
@@ -80,8 +84,17 @@
 }
 
 .titleGenre button {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
     border: none;
     background: none;
+
+    transition: all ease .2s;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
 }
 
 .bookSection {

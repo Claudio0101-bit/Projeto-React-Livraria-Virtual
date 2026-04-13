@@ -16,34 +16,72 @@ export default function BookPage() {
     
     const { data: book, isPending, isError, error} = useIdBook(Number(bookId))
 
-    // if(isPending) {
-    //     return (
-    //         <h1 className={styles.pendingMsg}>Carregando Livro...</h1>
-    //     )
-    // }
+    if (isPending) {
+        return <h1 className={styles.pendingMsg}>Carregando informações do livro...</h1>
+    }
 
-    // else if(isError) {
-        
-    //     // const status = Number((error as any)?.response?.status);
-    //     // let errorText: string
+    else if (isError || !book) {
 
-    //     // switch (status) {
-    //     //     case 404:
-    //     //         errorText = "O Livro Requisitado não foi Encontrado."
-    //     //     case 401:
-    //     //         errorText = "Você não tem Permissão para acessar esses Dados."
-    //     //     case 400:
-    //     //         errorText = "Não foi possível realizar a Busca."
-    //     //     case 500:
-    //     //         errorText = "Erro interno no servidor. Tente novamente mais tarde"
-    //     //     default:
-    //     //         errorText = "Erro Desconhido!"
-    //     // }
-
-    //     return (
-    //         <h1 className={styles.errorMsg}>Algo deu Errado</h1>
-    //     )
-    // }
+        const status = (error as any)?.response?.status;
+        switch (status){
+            case 404:
+                return (
+                    <div className={styles.errorContainer}>
+                        <h1 className={styles.errorMsg}>Error 404 - Not Found</h1>
+                        <h2 className={styles.errorMsg}>O livro que você está procurando não foi encontrado.</h2>
+                        <button onClick={BackClick} className={styles.backBtn}>
+                            <img src={arrowSyboml} alt="Seta para voltar" />
+                            Voltar para Home
+                        </button>
+                    </div>
+                );
+                
+            case 401:
+                return (
+                    <div className={styles.errorContainer}>
+                        <h1 className={styles.errorMsg}>Error 401 - Unathorized</h1>
+                        <h2 className={styles.errorMsg}>Você não tem permissão para acessar este recurso.</h2>
+                        <button onClick={BackClick} className={styles.backBtn}>
+                            <img src={arrowSyboml} alt="Seta para voltar" />
+                            Voltar para Home
+                        </button>
+                    </div>
+                );
+            case 400:
+                return (
+                    <div className={styles.errorContainer}>
+                        <h1 className={styles.errorMsg}>Error 400 - Bad Request</h1>
+                        <h2 className={styles.errorMsg}>Há um problema com a sua solicitação.</h2>
+                        <button onClick={BackClick} className={styles.backBtn}>
+                            <img src={arrowSyboml} alt="Seta para voltar" />
+                            Voltar para Home
+                        </button>
+                    </div>
+                );
+            case 500:
+                return (
+                    <div className={styles.errorContainer}>
+                        <h1 className={styles.errorMsg}>Error 500 - Internal Server Error</h1>
+                        <h2 className={styles.errorMsg}>Há um problema com o servidor.</h2>
+                        <button onClick={BackClick} className={styles.backBtn}>
+                            <img src={arrowSyboml} alt="Seta para voltar" />
+                            Voltar para Home
+                        </button>
+                    </div>
+                );
+            default:
+                return (
+                    <div className={styles.errorContainer}>
+                        <h1 className={styles.errorMsg}>Unknown Error</h1>
+                        <h2 className={styles.errorMsg}>Erro desconhecido, tente novamente mais tarde.</h2>
+                        <button onClick={BackClick} className={styles.backBtn}>
+                            <img src={arrowSyboml} alt="Seta para voltar" />
+                            Voltar para Home
+                        </button>
+                    </div>
+                );
+        }
+    }
 
     return (
         <>
@@ -52,8 +90,8 @@ export default function BookPage() {
                 <div className={styles.titleDetails}>
                     <button onClick={BackClick}>
                         <img src={arrowSyboml} alt="Seta para voltar" />
+                        <h3>Detalhes do Livro</h3>
                     </button>
-                    <h3>Detalhes do Livro</h3>
                 </div>
                 
                 <div className={styles.bookContainer}>
